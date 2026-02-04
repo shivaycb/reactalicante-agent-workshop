@@ -23,7 +23,7 @@ This is a condensed reference for the React Alicante AI Agent Workshop. For comp
 - **Action:** Create LLM conversation interface
 
 ### Step 4: Gemini LLM (30 min)
-- **Commit:** `25ff0b56` - "add gemini llm"
+- **Commit:** `25ff0b56` - "add Gemini llm"
 - **Goal:** Add cloud-based AI alternative
 - **New File:** `src/ai/llm/GeminiLlm.ts`
 - **Action:** Implement Gemini API integration

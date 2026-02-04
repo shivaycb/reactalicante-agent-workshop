@@ -3,7 +3,7 @@
 ## Workshop Overview
 This hands-on workshop teaches participants how to build an AI-powered shopping assistant for a React e-commerce application. Participants will learn to integrate AI capabilities using both local (WebLLM) and cloud-based (Google Gemini) models, implement vector search for semantic matching, and create an agentic system with tool calling.
 
-**Duration:** ~3-4 hours  
+**Duration:** ~4 hours (4 hours 20 minutes with breaks)  
 **Level:** Intermediate (React knowledge required)  
 **Target Audience:** React developers interested in adding AI capabilities to their applications
 
