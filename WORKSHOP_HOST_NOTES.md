@@ -731,6 +731,7 @@ class Agent {
         })
         .filter(Boolean)
         .join("\n\n");
+      round++;
     }
 
     return (
