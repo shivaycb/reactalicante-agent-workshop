@@ -453,12 +453,12 @@ export default GeminiLlm;
 - Parts array structure: `{ parts: [{ text: "..." }] }`
 
 **Duck Typing / Interface Compatibility**:
-- Same public API as WebLLM: `createConversation()` returns object with `generate()`
-- Can swap implementations without changing calling code
-- This is the power of abstraction!
+- Similar high-level shape to WebLLM: both expose `createConversation()` and a `generate()` method
+- But the `generate` signatures differ (WebLLM: `(prompt, temperature?)`, Gemini: `(prompt, callback?)`)
+- To truly swap implementations without changing calling code, introduce a shared interface or adapter that normalizes these differences
 
-**Callback Pattern**:
-- Optional callback parameter for streaming UI updates
+**Callback Pattern (Gemini-specific)**:
+- Gemini uses an optional callback parameter for streaming UI updates
 - Could be enhanced for true streaming with Server-Sent Events
 - Useful for showing incremental responses
 
