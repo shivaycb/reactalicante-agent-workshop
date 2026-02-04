@@ -393,6 +393,17 @@ class GeminiLlm {
     });
     const body: GeminiResponse = await resp.json();
 
+    if (
+      !body ||
+      !body.candidates ||
+      body.candidates.length === 0 ||
+      !body.candidates[0].content ||
+      !body.candidates[0].content.parts ||
+      body.candidates[0].content.parts.length === 0 ||
+      typeof body.candidates[0].content.parts[0].text !== "string"
+    ) {
+      throw new Error("Invalid response from Gemini API: missing candidates content");
+    }
     return body.candidates[0].content.parts[0].text;
   };
 
