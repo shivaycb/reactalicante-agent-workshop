@@ -88,7 +88,7 @@ Get API key: https://aistudio.google.com/apikey
 - **Concept**: Cloud-based LLM integration
 - **Key Points**:
   - REST API integration
-  - Same interface as WebLLM (abstraction)
+  - Similar abstraction layer to WebLLM, but different `generate(...)` signature (callback vs temperature), so not directly interchangeable without adapter code
   - Requires API key
 
 ### Step 4: Agent + RAG
