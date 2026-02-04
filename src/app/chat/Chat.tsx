@@ -284,7 +284,7 @@ const Chat: React.FC = () => {
     );
 
     return agent;
-  }, [navigate]);
+  }, []); // Remove navigate from dependencies - agent doesn't need to be recreated
 
   return (
     <React.Fragment>

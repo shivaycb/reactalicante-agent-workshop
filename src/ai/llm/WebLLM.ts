@@ -25,16 +25,9 @@ import { GEMMA_2_9B_CONFIG } from "../../utils/agent/webllm.ts";
           console.log(messages);
   
           if (!this.engine) {
-            /*
-            this.engine = await CreateMLCEngine(GEMMA_2_2B_ID,{
-              initProgressCallback: console.log,
-            });
-             */
+            // Using the standard model ID - will use cached version if available
             this.engine = await CreateMLCEngine(GEMMA_2_9B_CONFIG.model_id, {
               initProgressCallback: console.log,
-              appConfig: {
-                model_list: [GEMMA_2_9B_CONFIG],
-              },
             });
           }
   
